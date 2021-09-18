@@ -1,0 +1,11 @@
+<h2>{{ titulo }}</h2>
+<form action=" {% url 'propuesto:resultadovolumen' %} " method="post">
+    {% csrf_token %}
+    Introduzca el diámetro en metros:<br>
+    <input type="number" name="diametro"><br><br>
+    Introduzca la altura en metros:<br>
+    <input type="number" name="altura"><br>
+    <br>
+    <button type="submit">Calcular</button>
+
+</form>
