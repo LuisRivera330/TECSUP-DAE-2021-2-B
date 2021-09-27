@@ -1,0 +1,12 @@
+from django.urls import path
+from django.urls.resolvers import URLPattern
+
+from . import views
+
+app_name = 'tienda'
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('producto/<int:producto_id>', views.producto, name='producto'),
+    path('categoria/<int:category_id>/',views.categoria,name='categoria')
+]
