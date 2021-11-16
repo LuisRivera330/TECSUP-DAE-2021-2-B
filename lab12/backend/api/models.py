@@ -1,6 +1,8 @@
 from django.db import models
+from django.db.models.base import Model
 
 # Create your models here.
+
 class Prestamos(models.Model):
     libro = models.CharField(max_length=100)
     alumno = models.CharField(max_length=60)
